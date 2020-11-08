@@ -1,1 +1,1 @@
-# PyGame-WOG
+# World of Games
