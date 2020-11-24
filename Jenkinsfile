@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout_pull') {
       steps {
-        git(url: 'https://github.com/dev2function/PyGame-WOG.git', branch: 'master')
+        git(url: 'https://github.com/dev2function/PyGame-World-of-Games.git', branch: 'master')
       }
     }
 
