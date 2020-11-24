@@ -1,5 +1,5 @@
 # World of Games
-Two games guess game, Memory game. 
+Two games: guess game, Memory game. 
 
 # Part one:
 
