@@ -1,4 +1,4 @@
-# test url whit selenium
+# test url with selenium
 # url = http://0.0.0.0:8777/
 
 from selenium import webdriver
