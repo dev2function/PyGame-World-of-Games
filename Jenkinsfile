@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -t pygame .'
+        sh 'docker build -t pygame_1 .'
       }
     }
 
