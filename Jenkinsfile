@@ -9,13 +9,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -t pygame_1 .'
+        sh 'docker build -t my_image .'
       }
     }
 
     stage('Run') {
       steps {
-        sh 'docker run --rm -it -v .:/code -p 8777:8777 pygame_1:latest'
+        sh 'docker-compose up'
       }
     }
 
@@ -28,7 +28,7 @@ pipeline {
 
     stage('Finalize') {
       steps {
-        sh 'docker rmi pygame_1'
+        sh 'docker image rm my_image'
       }
     }
 
