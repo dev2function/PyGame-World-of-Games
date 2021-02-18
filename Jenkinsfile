@@ -15,7 +15,7 @@ pipeline {
 
     stage('Run') {
       steps {
-        sh 'docker run --rm -it -v .:/code -p 8777:8777 image:latest'}
+        sh 'docker run --rm -d -it -v .:/code -p 8777:8777 image:latest'}
     }
 
     stage('Test') {
