@@ -15,7 +15,7 @@ pipeline {
 
     stage('Run') {
       steps {
-        sh 'docker-compose up'
+        sh 'docker run --rm -it -v .:/code -p 8777:8777 py.game:latest'
       }
     }
 
