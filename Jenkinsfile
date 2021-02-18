@@ -15,7 +15,7 @@ pipeline {
 
     stage('Run') {
       steps {
-        sh 'docker run --rm -it -v .:/code -p 8777:8777 py.game:latest'
+        sh 'docker run --rm -it -v .:/code -p 8777:8777 pygame_1:latest'
       }
     }
 
@@ -28,7 +28,7 @@ pipeline {
 
     stage('Finalize') {
       steps {
-        sh 'docker image rm pygame'
+        sh 'docker rmi pygame_1'
       }
     }
 
