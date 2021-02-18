@@ -6,4 +6,4 @@ services:
      - "8777"
     volumes:
      - .:/code
-    image: "my_image"
+    image: "image"
