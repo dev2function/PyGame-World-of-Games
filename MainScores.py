@@ -1,14 +1,11 @@
-
 from flask import Flask
-import Utils
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def score_server():
     try:
-        score = open("scores.txt", "r")
+        score = open("Scores.txt", "r")
     except BaseException as e:
         return """<html>
         <head>
@@ -16,7 +13,7 @@ def score_server():
         </head>
         <body>
         <body>
-            <h1><div id="score" style="color:red">""" + Utils.BAD_RETURN_CODE() + str(e) + """</div></h1>
+            <h1><div id="score" style="color:red">""" + Utils.BAD_RETURN_CODE + str(e) + """</div></h1>
         </body>
         </html>
         """
@@ -32,4 +29,4 @@ def score_server():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0:8777', debug=True, threaded=True, port=5000)
+    app.run(host='0.0.0.0', debug=True, threaded=True, port=8777)
