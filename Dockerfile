@@ -5,5 +5,4 @@ COPY *.py /
 COPY scores.txt /
 RUN pip install dependencies
 RUN pip install flask
-RUN pip install docker-compose
 CMD ["python3", "MainScores.py"]
