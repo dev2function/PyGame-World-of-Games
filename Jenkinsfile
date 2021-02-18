@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -t my_image .'
+        sh 'docker build -t image .'
       }
     }
 
@@ -28,7 +28,7 @@ pipeline {
 
     stage('Finalize') {
       steps {
-        sh 'docker image rm my_image'
+        sh 'docker image rm image'
       }
     }
 
